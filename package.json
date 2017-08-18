@@ -1,0 +1,25 @@
+{
+  "name": "Bitto",
+  "description": "A minimal Bitcoin helper app",
+  "author": "Nero One <info@nero1.net>",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build1": "electron-packager . --asar=true --platform=darwin --arch=x64 --icon=app/bitto.icns --overwrite",
+    "build2": "electron-packager . --asar=true --platform=win32 --arch=x64 --ico=app/bitto.ico --overwrite",
+    "epi": "epi",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.7.5",
+    "electron-packager": "^8.7.1",
+    "request": "^2.81.0"
+  },
+  "dependencies": {
+    "global": "^4.3.2",
+    "wine": "^0.0.3",
+    "request": "^2.81.0"
+  }
+}

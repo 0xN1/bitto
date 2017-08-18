@@ -1,0 +1,156 @@
+body {
+
+  /*background-color: #EEEEEE;*/
+  background-image: linear-gradient( 135deg, #FFAA85 10%, #B3315F 100%);
+  color: white;
+  font-family: 'HelveticaNeue-Light';
+  text-align: center;
+  position: sticky;
+  top: 50%;
+  cursor: default;
+}
+a {
+  font-family: 'HelveticaNeue-Light';
+  text-align: center;
+  font-weight:light;
+  color:#D38060;
+  transition:all 1s ease-out;
+  text-decoration: none;
+  /*opacity: 0;*/
+  -webkit-backface-visibility: hidden;
+  /*-webkit-filter: blur(3px);*/
+}
+
+a:hover{
+  color:#E6DCDB;
+  /*opacity: 1;*/
+  /*transform: rotate();*/
+  /*transform: translateX(300px);*/
+  -webkit-filter: blur(0px);
+  -webkit-backface-visibility: hidden;
+  transition:all 1s ease-in;
+}
+
+#main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#donate {
+  text-align: right;
+  position: fixed;
+  z-index: 3;
+  bottom: 1em;
+  left: 1em;
+  cursor: default;
+  font-size :25px;
+  font-weight:light;
+  color:#D38060;
+  transition:all 1.5s ease-in;
+}
+
+#lunoText {
+  text-align: right;
+  position: fixed;
+  z-index: 2;
+  bottom: 1em;
+  right: 1em;
+  cursor: default;
+  font-size :25px;
+  font-weight:light;
+  color:#FFAA85;
+  transition:all 1.5s ease-in;
+}
+
+#lunoText:hover{
+  color: #B3315F;
+  /*letter-spacing: 1px;*/
+  transition:all 1.5s ease-in;
+}
+
+#particles-js{
+  position: fixed;
+  z-index: -9999;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  /*transform: scale(2);*/
+}
+
+#hoosh {
+  color: white;
+  font-size: 50px;
+}
+
+#hash {
+  color: white;
+}
+
+#pr {
+  font-size: 25px;
+}
+
+#prText {
+  font-size: 25px;
+}
+
+#hehe {
+  cursor: default;
+  font-size :35px;
+  font-weight:light;
+  color:#E6DCDB;
+  transition:all 1.5s ease-in;
+}
+
+#hehe:hover{
+  /*-webkit-filter: hue-rotate(-5deg);*/
+  /*transform: scale(1);*/
+  /*-webkit-filter: blur(5px);*/
+  transition:all 1.5s ease-out;
+  color: #FF6766;
+  /*background-position: right center;*/
+}
+
+::selection{
+  color: #FF6766;
+}
+
+.calc {
+  position:sticky;
+  color: #FFAA85;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+}
+.calc:focus {
+  outline: none;
+  border-bottom: solid 2px #FF6766;
+}
+.calc::-webkit-input-placeholder{
+  color: #FFAA85;
+}
+
+.localstorage {
+
+  width: 400px;
+  text-align: center;
+  color: #FFAA85;
+  border: none;
+  position:sticky;
+  font-size: 20px;
+  /*flex: auto;*/
+  background-color: transparent;
+  /*background-image: linear-gradient( 135deg, #FFAA85 10%, #B3315F 100%);*/
+}
+.localstorage:focus {
+  outline: none;
+  border-bottom: solid 2px #FF6766;
+}
+.localstorage::-webkit-input-placeholder{
+  color: #FFAA85;
+}
