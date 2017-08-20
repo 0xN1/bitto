@@ -1,7 +1,5 @@
 const {app, electron ,BrowserWindow, Menu, clipboard} = require('electron')
 
-// const BrowserWindow = electron.BrowserWindow
-
 let mainWindow
 
 function createWindow() {
@@ -23,7 +21,10 @@ app.on('ready', () => {
         label: "Application",
         submenu: [
             // { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
-            { label: "bitto bitto bitto"},
+            { label: "bitto bitto bitto", click: () => {
+              nuWin = new BrowserWindow({width: 800, height: 800})
+              nuWin.loadURL('http://nero1.net')}
+            },
             { type: "separator" },
             { label: 'Reload', accelerator: 'CmdOrCtrl+R', click (item, focusedWindow) {if (focusedWindow) focusedWindow.reload()}},
             { label: "Dev Tools", accelerator: "CommandOrControl+Shift+I", click: () => {mainWindow.webContents.openDevTools()}},
@@ -39,7 +40,14 @@ app.on('ready', () => {
             { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
             { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
             { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
-        ]}
+        ]}, {
+          label: "Window",
+          submenu: [
+            { label: 'Minimize', click: () => {mainWindow.minimize()}},
+            { label: 'Maximize', click: () => {mainWindow.maximize()}},
+            { type: "separator" },
+            { label: 'Restore', click: () => {mainWindow.restore()}},
+        ]},
     ];
 
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));

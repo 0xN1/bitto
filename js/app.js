@@ -1,6 +1,6 @@
-var request = require ('request')
-var notify = require ('./js/notify.js')
-var lp = require ('./js/lunoPrice.js')
+var request = require('request')
+var notify = require('./js/notify.js')
+var lp = require('./js/lunoPrice.js')
 
 particlesJS.load('particles-js', './js/particles.json', function() {
   console.log('callback - particles-js config loaded');
@@ -8,6 +8,7 @@ particlesJS.load('particles-js', './js/particles.json', function() {
 
 
 var addr = document.querySelector('.localstorage');
+
 //hash = document.getElementById("hash")
 
 //addr.addEventListener('keyCode === 13', () => {checkBTC()})
@@ -34,7 +35,7 @@ getBalance = (arr) => {
 
   //Map value to id = "hash" in 10 decimal point
   updateSum = sum.toFixed(10) + ' BTC'
-  document.getElementById("hash").innerHTML = updateSum ;
+  document.getElementById("hash").innerHTML = updateSum;
 
   sumsum = sum.toFixed(10)
 
@@ -44,13 +45,15 @@ getBalance = (arr) => {
   hash2.innerHTML = '(RM ' + balanceMYR.toFixed(2) + ')'
 }
 
-// 1CPTNVgT96pFaC1phiE7rtKpMvBC2NBJ6R
+// Nicehash sample BTC address : 1CPTNVgT96pFaC1phiE7rtKpMvBC2NBJ6R
 
 checkBTC = () => {
   request("https://api.nicehash.com/api?method=stats.provider&addr=" + btcadd.value, function(error, response, body) {
 
     //Parse data, convert all "number" to number
-    body = JSON.parse(body,(k, v) => {return (typeof v === "object" || isNaN(v)) ? v : parseFloat(v);});
+    body = JSON.parse(body, (k, v) => {
+      return (typeof v === "object" || isNaN(v)) ? v : parseFloat(v);
+    });
 
     //Log data
     //console.log(body);
@@ -65,18 +68,13 @@ checkBTC = () => {
       getBalance(body);
 
       //Notify on every update
-      //if (notifyMe){
-      clipboard.writeText(sumsum)
-      // notify("Current NiceHash balance",updateSum +' is copied to clipboard');
-      //}
+      notify("Current NiceHash balance", updateSum);
 
       hash.style.fontSize = '45px'
       hash.style.color = '#E6DCDB'
       hash.style.transition = 'all 1s ease-out'
-      //document.getElementById("hoosh").innerHTML = 'Current NiceHash Balance'
 
-    }
-    else {
+    } else {
       console.log("Error : Incorrect BTC address specified.")
 
       hash.innerHTML = 'Incorrect BTC address specified.'
@@ -87,13 +85,9 @@ checkBTC = () => {
 
   });
 };
-//saveAddr = () => {localStorage.setItem('btcAddress', addr.value), checkBTC()}
 
 
-
-// clearAddr();
-
-//Check balance every 60 secs
+//Check balance every hour
 setInterval(function() {
   checkBTC();
   console.log('Checking current price...');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Bitto</title>
@@ -11,39 +12,43 @@
   <script src="./js/lunoPrice.js" charset="utf-8"></script>
   <script src="./js/donate.js" charset="utf-8"></script>
 </head>
+
 <body onload="lunoPrice()">
 
-    <div id="main"  style="-webkit-app-region: drag">
+  <div id="main" style="-webkit-app-region: drag">
+    <br><br>
+    <div id="hehe" style="font-size :90px">bitto</div>
+    <br><br>
+    <div id="hehe">NiceHash BTC Balance</div>
+    <br>
+    <input type="text" class="localstorage" onchange="checkBTC()" id="btcadd" placeholder="BTC ADDRESS"></input>
+    <div class="hashrate" id="hash" style="font-size:10px;font-weight:light"></div>
+    <div class="hashrate" id="hash2" style="font-size:25px;font-weight:light;color:#FFAA85"></div>
+
+
+    <div class="calc">
       <br><br>
-  <div id="hehe" style="font-size :90px">bitto</div>
-  <br><br><div id="hehe">NiceHash BTC Balance</div>
-  <br>
-  <input type="text" class="localstorage" onchange="checkBTC()" id="btcadd" placeholder="BTC ADDRESS"></input>
-  <!-- <div id="hoosh">Current NiceHash Balance</div> -->
-  <div class="hashrate" id="hash" style="font-size:10px;font-weight:light"></div>
-  <div class="hashrate" id="hash2" style="font-size:25px;font-weight:light;color:#FFAA85"></div>
-
-
-  <div class="calc">
-    <br><br><div id="hehe">Simple Profit/Loss Calculator</div>
-    <br>
-    <input class="calc" type="text" id="btc" onkeyup="tota()" placeholder="BTC" /><br>
-    <input class="calc"  type="text" id="buy" onkeyup="tota()" placeholder="BUY"/><br>
-    <input class="calc"  type="text" id="sell" onkeyup="tota()" placeholder="SELL"/><br>
-    <br>
-    <span id="prText" style="font-size:15px">PROFIT / LOSS</span><br><span id="prText">RM </span><span id="pr"></span><br>
+      <div id="hehe">Simple Profit/Loss Calculator</div>
+      <br>
+      <input class="calc" type="text" id="btc" onkeyup="tota()" placeholder="BTC" /><br>
+      <input class="calc" type="text" id="buy" onkeyup="tota()" placeholder="BUY" /><br>
+      <input class="calc" type="text" id="sell" onkeyup="tota()" placeholder="SELL" /><br>
+      <br>
+      <span id="prText" style="font-size:15px">PROFIT / LOSS</span><br><span id="prText">RM </span><span id="pr"></span><br>
+    </div>
+    <br><br>
+    <br style="height:100px">
   </div>
-  <br><br>
-  <br style="height:100px">
-  <!-- <div id="hehe" style="font-size:15px"><a onclick="nuWindow('http://nero1.net')">Copyright © 2017 Nero One</a></div> -->
-</div>
-<div style="position: fixed;z-index: 2;top: 1em;left: 1em;z-index:3px"><a onclick="nuWindow('http://nero1.net')">•</a></div>
-<div id="donate" onclick="donate()">Donate</div>
-<div id="lunoText"></div>
+  <div style="position: fixed;z-index: 2;top: 1em;left: 1em;z-index:3px">
+    <a onclick="nuWindow('http://nero1.net')">•</a>
+  </div>
+  <div id="donate" onclick="donate()">Donate</div>
+  <div id="lunoText" onclick="lunoPrice()"></div>
 
-<div id="particles-js" style="height:1080px;width:1200px">
-</div>
+  <div id="particles-js" style="height:1080px;width:1200px">
+  </div>
 
 
 </body>
+
 </html>
