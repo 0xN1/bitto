@@ -2,7 +2,7 @@
   "name": "Bitto",
   "description": "A minimal Bitcoin helper app",
   "author": "Nero One <info@nero1.net>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
