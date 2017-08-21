@@ -1,6 +1,6 @@
 
 
-![bitto_scr](https://user-images.githubusercontent.com/9148847/29462174-084d960e-8461-11e7-9cb7-229037d596ea.png)
+![bitto_v012](https://user-images.githubusercontent.com/9148847/29541985-7b913bce-870a-11e7-93d9-7ed81f851205.png)
 
 # bitto
 ### What is bitto?
