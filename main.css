@@ -1,5 +1,4 @@
 body {
-
   /*background-color: #EEEEEE;*/
   background-image: linear-gradient( 135deg, #FFAA85 10%, #B3315F 100%);
   color: white;
@@ -9,6 +8,7 @@ body {
   top: 50%;
   cursor: default;
 }
+
 a {
   font-family: 'HelveticaNeue-Light';
   text-align: center;
@@ -26,7 +26,7 @@ a:hover{
   /*opacity: 1;*/
   /*transform: rotate();*/
   /*transform: translateX(300px);*/
-  -webkit-filter: blur(0px);
+  -webkit-filter: blur(10px);
   -webkit-backface-visibility: hidden;
   transition:all 1s ease-in;
 }
@@ -39,6 +39,14 @@ a:hover{
   transform: translate(-50%, -50%);
 }
 
+#titleBarDrag {
+  width:100vw;
+  height:2em;
+  position: fixed;
+  top:0;
+  -webkit-app-region: drag;
+}
+
 #donate {
   text-align: right;
   position: fixed;
@@ -49,6 +57,11 @@ a:hover{
   font-size :25px;
   font-weight:light;
   color:#D38060;
+  transition:all 1.5s ease-in;
+}
+
+#donate:hover{
+  color: #E6DCDB;
   transition:all 1.5s ease-in;
 }
 

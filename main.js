@@ -3,7 +3,8 @@ const {app, electron ,BrowserWindow, Menu, clipboard} = require('electron')
 let mainWindow
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 800, height: 800, frame: false})
+  mainWindow = new BrowserWindow({width: 800, height: 800, titleBarStyle: 'hiddenInset'})
+  // mainWindow = new BrowserWindow({width: 800, height: 800,frame: false})
 
   mainWindow.loadURL(`file://${__dirname}/index.html`)
 
